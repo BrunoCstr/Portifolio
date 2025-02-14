@@ -36,7 +36,9 @@ import telephoneImg from "../images/telefone.svg";
 import emailImg from "../images/email.svg";
 import linkedinImg from "../images/linkedin.svg";
 import instagramImg from "../images/instagram.svg";
-import githubImg from "../images/github.png";
+import github_minImg from "../images/github_min.png";
+import logoBRN from "../images/Logo-Img.png";
+import iconBack from "../images/iconBack.png";
 
 export default {
     BR,
@@ -73,9 +75,11 @@ export default {
     SouAvantarColaboradorImg,
     PainelRedeRSupImg,
     commingSoonImg,
-    githubImg,
+    github_minImg,
     instagramImg,
     linkedinImg,
     emailImg,
-    telephoneImg
+    telephoneImg,
+    logoBRN,
+    iconBack
 };
