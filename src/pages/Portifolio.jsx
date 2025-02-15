@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 
 import images from "../assets/images/images";
+import { projects } from "../data/projects";
 import { ProjectCard } from "../components/ProjectCard";
 import { ServicesCard } from "../components/ServicesCard";
 
@@ -24,7 +25,7 @@ export function Portifolio() {
       {/* Nav Header */}
       <div className="relative flex items-center text-white-custom w-screen h-16 bg-red-custom shadow-lg">
         <div className="flex items-center justify-end w-[18%]">
-            <img src={images.logoBRN} className="h-35"/>
+          <img src={images.logoBRN} className="h-35" />
         </div>
         {/* navContent */}
         <div className="relative w-[95%] flex items-center justify-end gap-15">
@@ -155,10 +156,10 @@ export function Portifolio() {
           )}
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
       {/* Seção sobre mim */}
       <div className="flex grid-cols-2 w-full h-150">
         <div className="flex justify-center items-center w-[40%]">
@@ -202,10 +203,10 @@ export function Portifolio() {
           </button>
         </div>
       </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
+      <br />
       {/* Seção dos projetos */}
       <div className="flex justify-center w-full h-260">
         <div className="w-[86%] h-[100%]">
@@ -213,32 +214,15 @@ export function Portifolio() {
           <br />
           <br />
           <div className="grid grid-cols-3 gap-10 w-full h-[100%]">
-            <ProjectCard
-              image={images.AvantarIndicaImg}
-              title="Avantar Indica"
-              description="Aplicativo desenvolvido para facilitar a indicação de clientes e recompensar indicadores de forma prática e atrativa. Por meio do app, o indicador pode acessar sua lista de contatos, indicar clientes ao franqueado designado e selecionar os seguros com maior potencial de fechamento.
-                            Clique no botão para mais detalhes!"
-            />
-            <ProjectCard
-              image={images.DashboardAvantarImg}
-              title="Dashboard Avantar"
-              description="Uma ferramenta gerencial estratégica desenvolvida com Power BI para análise de dados na franqueadora. Ele consolida informações de plataformas externas, atualizadas automaticamente a cada 30 minutos via API, fornecendo insights em tempo real para a tomada de decisões.  Clique no botáo para mais detalhes!"
-            />
-            <ProjectCard
-              image={images.SouAvantarColaboradorImg}
-              title="Sou Avantar Colaborador"
-              description="Sistema web criado para otimizar as operações do RH. Ele permite que colaboradores tenham acesso rápido e fácil aos seus contra-cheques diretamente pelo celular, enquanto o RH consegue gerenciar todas as operações relacionadas, como criar, visualizar, editar e excluir contra-cheques. Clique no botáo para mais detalhes!"
-            />
-            <ProjectCard
-              image={images.PessoasAvantarImg}
-              title="Pessoas Avantar"
-              description="Um sistema completo de processo seletivo, com foco na análise de perfil tipológico e comportamental. O sistema conta com um teste composto por 69 questões cuidadosamente elaboradas para identificar as características e comportamentos dos candidatos à franquia ou colaboradores. Clique no botáo para mais detalhes!"
-            />
-            <ProjectCard
-              image={images.PainelRedeRSupImg}
-              title="Painel Rede RSup!"
-              description="Uma plataforma administrativa desenvolvida exclusivamente para a equipe interna de uma franqueadora de corretora de seguros. Ele centraliza e organiza informações essenciais para a transmissão de seguros da rede, garantindo um fluxo de trabalho mais eficiente e estruturado. Clique no botáo para mais detalhes!"
-            />
+            {projects.map((project, index) => (
+              <ProjectCard 
+              key={index}
+              image={project.homeImage}
+              title={project.appName}
+              description={project.homeDescription}
+              projectID={project.id}
+              />
+            ))}
             <ProjectCard
               image={images.commingSoonImg}
               title="Em desenvolvimento..."
@@ -255,8 +239,8 @@ export function Portifolio() {
       <br />
       <br />
       <br />
-      <br/>
-      <br/>
+      <br />
+      <br />
       {/* Seção dos Serviçõs Contratáveis */}
       <div className="flex justify-center w-full h-190">
         <div className="w-[86%] h-[100%]">
@@ -314,14 +298,12 @@ export function Portifolio() {
           </div>
         </div>
         <div className="w-[43%] h-[100%] flex flex-col items-center">
-          <h1 className="text-red-custom font-bold text-[1.8rem]">
-            Siga me
-          </h1>
+          <h1 className="text-red-custom font-bold text-[1.8rem]">Siga me</h1>
           <br />
           <div className="flex flex-row gap-3">
-            <img src={images.linkedinImg} className="cursor-pointer"/>
-            <img src={images.instagramImg} className="cursor-pointer"/>
-            <img src={images.github_minImg} className="cursor-pointer"/>
+            <img src={images.linkedinImg} className="cursor-pointer" />
+            <img src={images.instagramImg} className="cursor-pointer" />
+            <img src={images.github_minImg} className="cursor-pointer" />
           </div>
         </div>
       </div>

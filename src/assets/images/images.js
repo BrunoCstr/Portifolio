@@ -39,6 +39,23 @@ import instagramImg from "../images/instagram.svg";
 import github_minImg from "../images/github_min.png";
 import logoBRN from "../images/Logo-Img.png";
 import iconBack from "../images/iconBack.png";
+import AvantarIndicaLogo from "../images/avantar_indica_logo.png";
+import exempleImage from "../images/exempleImage.png";
+import firebaseOriginal from "../images/firebaseOriginal.png";
+import flutterOriginal from "../images/flutterOriginal.png";
+import dartOriginal from "../images/dartOriginal.png";
+import pbiOriginal from "../images/powerbioriginal.png";
+import jsOriginal from "../images/JavaScriptOriginal.png";
+import pyOriginal from "../images/pythonOriginal.webp";
+import htmlOriginal from "../images/htmlOriginal.webp";
+import mysqlOriginal from "../images/mysqlOriginal.svg";
+import nodeOriginal from "../images/nodejsoriginal.png";
+import sassOriginal from "../images/sassOriginal.png";
+import cssOriginal from "../images/cssOriginal.png";
+import reactOriginal from "../images/reactOriginal.webp";
+import tsOriginal from "../images/tsOriginal.png";
+import tailwindOriginal from "../images/tailwindOriginal.png";
+import logoRSup from "../images/painelredersuplogo.png"
 
 export default {
     BR,
@@ -81,5 +98,22 @@ export default {
     emailImg,
     telephoneImg,
     logoBRN,
-    iconBack
+    iconBack,
+    AvantarIndicaLogo,
+    exempleImage,
+    firebaseOriginal,
+    dartOriginal,
+    flutterOriginal,
+    mysqlOriginal,
+    htmlOriginal,
+    pyOriginal,
+    jsOriginal,
+    pbiOriginal,
+    nodeOriginal,
+    sassOriginal,
+    cssOriginal,
+    tsOriginal,
+    reactOriginal,
+    tailwindOriginal,
+    logoRSup
 };
