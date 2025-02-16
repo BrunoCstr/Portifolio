@@ -8,6 +8,8 @@ export function OpenProject() {
   const navigate = useNavigate();
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
+  console.log(project)
+  
 
   if (!project) return <h1>Projeto não encontrado</h1>;
 
@@ -43,24 +45,24 @@ export function OpenProject() {
         <div className="w-full h-full flex items-center flex-col">
           {/* Header Content */}
           <div className="h-[22%] w-[85%] flex flex-row items-center gap-5">
-            <img src={projects.appLogo} className="h-23 rounded-2xl" />
+            <img src={project.appLogo} className="h-23 rounded-2xl" />
             <h1 className="text-blue-custom text-6xl font-bold">
-              {projects.appName}
+              {project.appName}
             </h1>
           </div>
           {/* Description and Images */}
           <div className="h-[30%] w-[85%] flex flex-col gap-3">
             <span className="text-blue-custom font-bold text-[1.1rem]">
-              {projects.description}
+              {project.description}
             </span>
             <div className="flex flex-row gap-3">
-              {projects.techLogos?.map((logo, index) => (
+              {project.techLogos?.map((logo, index) => (
                 <img key={index} className="h-7 w-7" src={logo}></img>
               ))}
             </div>
             <br />
             <div className="flex flex-col gap-3">
-              {projects.appImages?.map((image, index) => (
+              {project.appImages?.map((image, index) => (
                 <img key={index} className="rounded-2xl" src={image} />
               ))}
             </div>
