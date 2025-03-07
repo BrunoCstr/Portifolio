@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 
 import { Portifolio } from "./pages/Portifolio";
 import { OpenProject } from "./pages/OpenProject";
+import ScrollToTop from "./components/functions/ScrollToTop";
 
 function AnimatedRoutes() {
   const location = useLocation(); // Obtém a rota atual
@@ -20,6 +21,7 @@ function AnimatedRoutes() {
 export function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <AnimatedRoutes/>
     </Router>
   );

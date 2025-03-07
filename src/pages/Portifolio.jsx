@@ -1,8 +1,13 @@
 import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 import gsap from "gsap";
 
 import images from "../assets/images/images";
 import { projects } from "../data/projects";
+import { services } from "../data/services";
+import { ContactMeButton } from "../components/functions/ContactMeButton";
+import { DownloadCV } from "../components/functions/DonwloadCV";
 import { ProjectCard } from "../components/ProjectCard";
 import { ServicesCard } from "../components/ServicesCard";
 
@@ -23,28 +28,31 @@ export function Portifolio() {
   return (
     <>
       {/* Nav Header */}
-      <div className="relative flex items-center text-white-custom w-screen h-16 bg-red-custom shadow-lg">
+      <div className="relative flex items-center text-white-custom w-screen h-19 bg-blue-custom">
         <div className="flex items-center justify-end w-[18%]">
-          <img src={images.logoBRN} className="h-35" />
+          <img src={images.logoBRN} className="h-25" />
         </div>
         {/* navContent */}
-        <div className="relative w-[95%] flex items-center justify-end gap-15">
-          {/* Serviços */}
-          <span className="cursor-pointer">Serviços</span>
+        <div className="absolute w-[100%] flex items-center justify-center gap-20">
+          {/* Projetos */}
+          <Link to="projects" smooth={true} duration={500}>
+            <span className="cursor-pointer relative group">PROJETOS</span>
+          </Link>
 
           {/* Sobre mim */}
-          <span className="cursor-pointer">Sobre mim</span>
+          <Link to="about-me" smooth={true} duration={500}>
+            <span className="cursor-pointer relative group">SOBRE MIM</span>
+          </Link>
 
-          {/* Projetos */}
-          <span className="cursor-pointer">Projetos</span>
+          {/* Serviços */}
+          <Link to="services" smooth={true} duration={500}>
+            <span className="cursor-pointer relative group">SERVIÇOS</span>
+          </Link>
 
-          {/* Button download CV */}
-          <button
-            type="button"
-            className="cursor-pointer bg-cv h-10 w-27 rounded-md"
-          >
-            Baixar CV
-          </button>
+          {/* Contato */}
+          <Link to="contact" smooth={true} duration={500}>
+            <span className="cursor-pointer relative group">CONTATO</span>
+          </Link>
 
           {/* Ícone/Bandeira principal */}
           <img
@@ -90,9 +98,18 @@ export function Portifolio() {
       {/* Home Content */}
 
       {/* Minha foto */}
-      <div className="absolute bottom-0 right-0 h-155 w-[35%]">
-        <img src={images.BrunoHome} className="h-155" />
-      </div>
+      <motion.div
+        className="absolute bottom-0 right-0 w-[35%]"
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 50, damping: 25 }}
+      >
+        <img
+          src={images.BrunoHome}
+          className="h-auto max-h-[85vh] w-full object-contain"
+        />
+      </motion.div>
+
       {/* Texto */}
       <div className="containerText flex justify-center items-center text-6xl h-[81.8vh] w-[65%]">
         <div className="flex flex-col gap-3">
@@ -104,17 +121,20 @@ export function Portifolio() {
           </span>
           <span>qualidade!</span>
           <br />
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             type="button"
-            className="btnHome cursor-pointer h-10 w-27 rounded-md"
+            className="btnHome cursor-pointer h-11 w-32 rounded-md"
+            onClick={ContactMeButton}
           >
             Contate-Me
-          </button>
+          </motion.button>
         </div>
       </div>
       {/* Setinha */}
-      <div className="h-[10vh] flex justify-center bg">
-        <img ref={arrowRef} src={images.Arrow} className="h-[85%]" />
+      <div className="h-[8vh] flex justify-center bg">
+          <img ref={arrowRef} src={images.Arrow} className="h-[90%]" />
       </div>
       <br />
       <br />
@@ -161,11 +181,23 @@ export function Portifolio() {
       <br />
       <br />
       {/* Seção sobre mim */}
-      <div className="flex grid-cols-2 w-full h-150">
-        <div className="flex justify-center items-center w-[40%]">
+      <div id="about-me" className="flex grid-cols-2 w-full h-150">
+        <motion.div
+          className="flex justify-center items-center w-[40%]"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 25 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <img src={images.SobreMimImg}></img>
-        </div>
-        <div className="flex flex-col justify-center items-center w-[60%]">
+        </motion.div>
+        <motion.div
+          className="flex flex-col justify-center items-center w-[60%]"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 25 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h1 className="text-red-custom font-bold text-[3rem]">Sobre mim</h1>
           <br />
           <div className="w-[70%]">
@@ -195,39 +227,66 @@ export function Portifolio() {
           </div>
           <br />
           <br />
-          <button
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
             type="button"
-            className="btnHome cursor-pointer bg- h-10 w-27 rounded-md"
+            className="btnHome cursor-pointer bg- h-11 w-32 rounded-md"
+            onClick={DownloadCV}
           >
             Baixar CV
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
       <br />
       <br />
       <br />
       <br />
       {/* Seção dos projetos */}
-      <div className="flex justify-center w-full h-260">
+      <div id="projects" className="flex justify-center w-full h-260">
         <div className="w-[86%] h-[100%]">
           <h1 className="text-red-custom font-bold text-[3rem]">Projetos</h1>
           <br />
           <br />
           <div className="grid grid-cols-3 gap-10 w-full h-[100%]">
             {projects.map((project, index) => (
-              <ProjectCard 
-              key={index}
-              image={project.homeImage}
-              title={project.appName}
-              description={project.homeDescription}
-              projectID={project.id}
-              />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 25,
+                  delay: index * 0.2,
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <ProjectCard
+                  image={project.homeImage}
+                  title={project.appName}
+                  description={project.homeDescription}
+                  projectID={project.id}
+                />
+              </motion.div>
             ))}
-            <ProjectCard
-              image={images.commingSoonImg}
-              title="Em desenvolvimento..."
-              description="Enquanto esse projeto está sendo criado, que tal pegar um café? Afinal, nenhuma linha de código nasce sem uma boa dose de cafeína! 🚀"
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                type: "spring",
+                stiffness: 50,
+                damping: 25,
+                delay: projects.length * 0.2,
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <ProjectCard
+                image={images.commingSoonImg}
+                title="Em desenvolvimento..."
+                description="Enquanto esse projeto está sendo criado, que tal pegar um café? Afinal, nenhuma linha de código nasce sem uma boa dose de cafeína! 🚀"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
@@ -242,7 +301,7 @@ export function Portifolio() {
       <br />
       <br />
       {/* Seção dos Serviçõs Contratáveis */}
-      <div className="flex justify-center w-full h-190">
+      <div id="services" className="flex justify-center w-full h-190">
         <div className="w-[86%] h-[100%]">
           <h1 className="text-red-custom font-bold text-[3rem]">
             Serviços contratáveis
@@ -250,30 +309,25 @@ export function Portifolio() {
           <br />
           <br />
           <div className="grid grid-cols-3 gap-10 w-full h-[40%]">
-            <ServicesCard
-              title="Criação de Sites"
-              description="Tenha um site profissional, moderno e otimizado para SEO! Desenvolvo sites rápidos, responsivos e seguros, perfeitos para destacar sua marca e atrair clientes. Quer um site institucional, blog ou e-commerce? Eu crio a solução ideal para o seu negócio!"
-            />
-            <ServicesCard
-              title="Criação de Landing Pages"
-              description="Aumente suas conversões com uma landing page estratégica e otimizada! Desenvolvo páginas de alta performance, com design impactante e carregamento rápido, perfeitas para capturar leads e gerar vendas. Transforme visitantes em clientes com uma landing page profissional!"
-            />
-            <ServicesCard
-              title="Criação de Sistemas Web"
-              description="Automatize processos e escale seu negócio com um sistema web personalizado! Desenvolvo plataformas robustas e seguras, integradas com bancos de dados e APIs, garantindo eficiência e uma ótima experiência para os usuários."
-            />
-            <ServicesCard
-              title="Criação de Dashboards"
-              description="Transforme dados em decisões inteligentes! Desenvolvo dashboards interativos e dinâmicos para que você acompanhe métricas essenciais do seu negócio em tempo real. Conecte-se a diferentes fontes de dados e visualize insights poderosos em um único lugar!"
-            />
-            <ServicesCard
-              title="Conexão/Consumo de APIs"
-              description="Integre seu sistema com qualquer serviço! Realizo conexões seguras e eficientes com APIs externas, garantindo automação e otimização de processos. Precisa conectar meios de pagamento, CRMs ou qualquer outra API? Eu resolvo para você!"
-            />
-            <ServicesCard
-              title="Criação de Aplicativos"
-              description="Transforme sua ideia em um aplicativo incrível! Desenvolvo apps nativos e híbridos para Android e iOS, com design moderno, alta performance e experiência do usuário impecável. Leve sua marca para a palma da mão dos seus clientes!"
-            />
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }} // Começa invisível e abaixo
+                whileInView={{ opacity: 1, y: 0 }} // Quando visível, fica 100% opaco e na posição original
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 25,
+                  delay: index * 0.2, // Atraso progressivo baseado no índice
+                }}
+                viewport={{ once: true, amount: 0.3 }} // Quando 30% do item estiver visível
+              >
+                <ServicesCard
+                  title={service.title}
+                  description={service.description}
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

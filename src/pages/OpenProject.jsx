@@ -8,8 +8,6 @@ export function OpenProject() {
   const navigate = useNavigate();
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
-  console.log(project)
-  
 
   if (!project) return <h1>Projeto não encontrado</h1>;
 
@@ -19,11 +17,11 @@ export function OpenProject() {
 
   return (
     <motion.div
-      initial={{ x: "100vw", opacity: 0 }} // Começa fora da tela (direita)
-      animate={{ x: 0, opacity: 1 }} // Entra suavemente
-      exit={{ x: "-100vw", opacity: 0 }} // Sai para a esquerda
-      transition={{ duration: 0.6, ease: "easeInOut" }} // Tempo da animação
-      className="w-full h-screen bg-white"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: "100vw", opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      className="w-full h-screen"
     >
       <div className="w-full h-screen">
         {/* Back Bar */}
@@ -34,11 +32,16 @@ export function OpenProject() {
             </span>
           </div>
           <div className="h-[20%] flex items-start justify-center">
-            <img
-              src={images.iconBack}
-              onClick={handleBackToProjects}
-              className="cursor-pointer h-9"
-            />
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <img
+                src={images.iconBack}
+                onClick={handleBackToProjects}
+                className="cursor-pointer h-9"
+              />
+            </motion.button>
           </div>
         </div>
         {/* Main Content */}
@@ -55,6 +58,7 @@ export function OpenProject() {
             <span className="text-blue-custom font-bold text-[1.1rem]">
               {project.description}
             </span>
+            <span className="cursor-pointer text-blue-700" onClick={(e) => window.open(project.url, '_blank')}>{project.url}</span>
             <div className="flex flex-row gap-3">
               {project.techLogos?.map((logo, index) => (
                 <img key={index} className="h-7 w-7" src={logo}></img>
@@ -63,7 +67,20 @@ export function OpenProject() {
             <br />
             <div className="flex flex-col gap-3">
               {project.appImages?.map((image, index) => (
-                <img key={index} className="rounded-2xl" src={image} />
+                <div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 25,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true, amount: 0.1 }}
+                >
+                  <img key={index} className="rounded-2xl" src={image} />
+                </div>
               ))}
             </div>
           </div>

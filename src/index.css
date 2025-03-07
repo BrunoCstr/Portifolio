@@ -1,109 +1,99 @@
 @import "tailwindcss";
 
 :root {
-    --red: #EF443B;
-    --white: #F8F8FF;
-    --blue: #160E33;
+  --red: #ef443b;
+  --white: #f8f8ff;
+  --blue: #160e33;
 }
 
 @layer utilities {
-    .bg-red-custom {
-        background-color: var(--red);
-    }
+  .bg-blue-custom {
+    background-color: var(--blue);
+  }
 
-    .text-white-custom {
-        color: var(--white);
-    }
+  .text-white-custom {
+    color: var(--white);
+  }
 
-    .text-blue-custom {
-        color: var(--blue);
-    }
+  .text-blue-custom {
+    color: var(--blue);
+  }
 
-    .text-red-custom {
-        color: var(--red);
-    }
+  .text-red-custom {
+    color: var(--red);
+  }
 
-    .bg-cv {
-        background-color: rgba(22, 14, 51, 0.5);
-        font-weight: medium;
-        font-size: 14px
-    }
-
-    .containerText {
-        font-weight: bold;
-        color: var(--blue);
-    }
-
-    .btnHome {
-        font-weight: normal;
-        color: var(--white);
-        font-size: 1rem;
-        background-color: var(--red);
-    }
-}
-
-@font-face {
-    font-family: 'Satoshi';
-    src: url('/src/assets/fonts/Satoshi-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Satoshi';
-    src: url('/src/assets/fonts/Satoshi-Medium.otf') format('opentype');
+  .bg-cv {
+    background-color: rgba(22, 14, 51, 0.5);
     font-weight: medium;
-    font-style: normal;
-}
+    font-size: 14px;
+  }
 
-@font-face {
-    font-family: 'Satoshi';
-    src: url('/src/assets/fonts/Satoshi-Bold.otf') format('opentype');
+  .containerText {
     font-weight: bold;
-    font-style: normal;
-}
+    color: var(--blue);
+  }
 
-@font-face {
-    font-family: 'Satoshi';
-    src: url('/src/assets/fonts/Satoshi-Light.otf') format('opentype');
-    font-weight: lighter;
-    font-style: normal;
+  .btnHome {
+    font-weight: normal;
+    color: var(--white);
+    font-size: 1.2rem;
+    background-color: var(--red);
+  }
 }
-
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100%;
-    width: 100vw;
-    background-color: var(--white);
-    font-family: Satoshi;
-    overflow-x: hidden;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--white);
+  font-family: "Rubik", sans-serif;
+  font-weight: 30;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .languageIcon {
-    margin-right: 25px;
+  position: absolute;
+  margin-left: 75%;
 }
 
 .dropdown {
-    margin-top: 15px;
-    z-index: 1;
+  margin-top: 2.5%;
+  z-index: 1;
+  margin-right: 8%;
 }
 
 @keyframes scrollLoop {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Adiciona a linha por baixo do texto do Navbar */
+.group::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.5px; 
+  background-color: var(--red); 
+  transition: width 0.5s ease-in-out; 
+}
+
+.group:hover::after {
+  width: 100%; 
 }
