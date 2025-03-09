@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import images from "../assets/images/images";
+import images from "../data/images";
 
 export function ProjectCard(props) {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export function ProjectCard(props) {
       <br />
       <div className="flex flex-col gap-3">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="text-red-custom text-2xl font-bold">{props.title}</h1>
+          <h1 className="text-red-custom text-2xl titleProjects">{props.title}</h1>
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <img
               src={images.openCardImg}
@@ -22,7 +22,7 @@ export function ProjectCard(props) {
         </div>
         <div className="border-t-2 border-red-500"></div>
         <div>
-          <p>{props.description}</p>
+          <p className="text-gray-300">{props.description}</p>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { OpenProject } from "./pages/OpenProject";
 import ScrollToTop from "./components/functions/ScrollToTop";
 
 function AnimatedRoutes() {
-  const location = useLocation(); // Obtém a rota atual
+  const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">

@@ -31,15 +31,41 @@
 
   .containerText {
     font-weight: bold;
-    color: var(--blue);
-  }
-
-  .btnHome {
-    font-weight: normal;
     color: var(--white);
-    font-size: 1.2rem;
-    background-color: var(--red);
+    background-image: url("./assets/images/background-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+}
+
+.btnHome {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 1rem;
+  background: rgba(22, 14, 51, 0.5);
+  border: 1px solid var(--red);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 9.5rem;
+}
+
+.btnHome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; 
+  height: 100%;
+  background: var(--red);
+  border-radius: inherit; 
+  z-index: -1;
+  transition: width 0.4s ease-in-out;
+}
+
+.btnHome:hover::before {
+  width: 100%;
 }
 
 * {
@@ -49,7 +75,7 @@
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   background-color: var(--white);
   font-family: "Rubik", sans-serif;
@@ -69,7 +95,7 @@ body {
 .dropdown {
   margin-top: 2.5%;
   z-index: 1;
-  margin-right: 8%;
+  margin-right: 9%;
 }
 
 @keyframes scrollLoop {
@@ -89,11 +115,39 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 0.5px; 
-  background-color: var(--red); 
-  transition: width 0.5s ease-in-out; 
+  height: 0.5px;
+  background-color: var(--red);
+  transition: width 0.5s ease-in-out;
 }
 
 .group:hover::after {
-  width: 100%; 
+  width: 100%;
+}
+
+.seta {
+  position: absolute;
+  margin-top: 25vh;
+}
+
+.languages {
+  padding-left: 10px;
+  transition: 0.7s;
+}
+
+.languages:hover {
+  background: rgba(22, 14, 51, 0.5);
+}
+
+.titleProjects {
+  font-weight: 400;
+}
+
+.imgBg {
+  background-image: url("./assets/images/imgBg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.clientesSatisfeitos {
+  margin-top: 4%;
 }

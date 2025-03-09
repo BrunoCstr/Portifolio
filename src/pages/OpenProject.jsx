@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { projects } from "../data/projects";
-import images from "../assets/images/images";
+import images from "../data/images";
 
 export function OpenProject() {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ export function OpenProject() {
     >
       <div className="w-full h-screen">
         {/* Back Bar */}
-        <div className="h-full bg-black w-[4%] flex flex-col fixed">
+        <div className="h-full bg-blue-custom w-[4%] flex flex-col fixed">
           <div className="h-[80%] flex items-center justify-center">
             <span className="text-red-custom text-2xl font-bold rotate-270">
               Projetos

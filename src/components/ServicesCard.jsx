@@ -1,25 +1,14 @@
-import { motion } from "framer-motion";
-
-import images from "../assets/images/images";
-import { ContactMe } from "./functions/ContactMeButton";
-
 export function ServicesCard(props) {
   return (
     <div className="w-[100%] h-70">
       <div className="flex flex-col gap-3">
-        <div className="flex flex-row items-center justify-between">
-          <h1 className="text-red-custom text-2xl font-bold">{props.title}</h1>
-          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <img
-              src={images.openCardImg}
-              className="cursor-pointer h-9"
-              onClick={ContactMe}
-            ></img>
-          </motion.button>
+        <div className="flex flex-row items-center gap-4">
+          <img className="h-15" src={props.img}></img>
+          <h1 className="text-white text-2xl font-bold">{props.title}</h1>
         </div>
-        <div className="border-t-2 border-red-500"></div>
+        <br/>
         <div>
-          <p>{props.description}</p>
+          <p className="text-gray-300">{props.description}</p>
         </div>
       </div>
     </div>
