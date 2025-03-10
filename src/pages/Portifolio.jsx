@@ -3,6 +3,7 @@ import { Home } from "../components/Home";
 import { Projects } from "../components/Projects";
 import { ContractableServices } from "../components/ContractableServices";
 import { SatisfiedCustomers } from "../components/SatisfiedCustomers";
+import { ContactMe } from "../components/ContactMe";
 
 export function Portifolio() {
   return (
@@ -12,6 +13,7 @@ export function Portifolio() {
       <Projects/>
       <ContractableServices/>
       <SatisfiedCustomers/>
+      <ContactMe/>
     </div>
   );
 }

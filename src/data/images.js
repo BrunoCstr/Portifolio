@@ -86,7 +86,13 @@ import criacao_de_sites from "../assets/images/criacao_de_sites.png";
 import criacao_de_sistemas from "../assets/images/criacao_de_sistemas.png";
 import criacao_lp from "../assets/images/criacao_lp.png";
 import criacao_de_dashboard from "../assets/images/criacao_de_dashboard.png";
-import imgBg from "../assets/images/imgBg.png"
+import imgBg from "../assets/images/imgBg.png";
+import customerBruno from "../assets/images/customerBruno.jpeg";
+import whatsapp from "../assets/images/whatsapp.png"
+import email from "../assets/images/email.png"
+import instagramWhite from "../assets/images/instagram_white.png"
+import githubWhite from "../assets/images/github_white.png"
+import linkedinWhite from "../assets/images/linkedin_white.png"
 
 export default {
     BR,
@@ -177,5 +183,11 @@ export default {
     criacao_de_sistemas,
     criacao_lp,
     criacao_de_dashboard,
-    imgBg
+    imgBg,
+    customerBruno,
+    email,
+    whatsapp,
+    linkedinWhite,
+    githubWhite,
+    instagramWhite
 };
