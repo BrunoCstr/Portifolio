@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 
 import { projects } from "../data/projects";
 import images from "../data/images";
+import { ProjectNotFound } from "../pages/ProjectNotFound";
 
 export function OpenProject() {
   const navigate = useNavigate();
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
 
-  if (!project) return <h1>Projeto não encontrado</h1>;
+  if (!project) return <ProjectNotFound/>;
 
   const handleBackToProjects = () => {
     navigate("/");

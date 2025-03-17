@@ -5,7 +5,7 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Faz a página rolar para o topo ao mudar de rota
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;

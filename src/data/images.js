@@ -52,7 +52,7 @@ import sassOriginal from "../assets/images/sassOriginal.png";
 import cssOriginal from "../assets/images/cssOriginal.png";
 import reactOriginal from "../assets/images/reactOriginal.webp";
 import tsOriginal from "../assets/images/tsOriginal.png";
-import tailwindOriginal from "../assets/images/tailwindOriginal.png";
+import tailwindOriginal from "../assets/images/tailwindOriginal.svg";
 import logoRSup from "../assets/images/painelredersuplogo.png";
 import AvantarIndicaCapa from "../assets/images/CapaAvantarIndica.png";
 import AvantarIndicaApresentacao1 from "../assets/images/Apresentacao_AvantarIndica1.png";

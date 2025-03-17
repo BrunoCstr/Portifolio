@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 
 import images from "../data/images";
+import { DownloadCV } from "../components/functions/DonwloadCV";
 import { ContactMeButton } from "../components/functions/ContactMeButton";
 
 export function Home() {
@@ -46,11 +47,16 @@ export function Home() {
           </Link>
 
           {/* Contato */}
-          <Link to="contact" smooth={true} duration={500}>
+          <Link to="ContactMe" smooth={true} duration={500}>
             <span className="cursor-pointer relative group">CONTATO</span>
           </Link>
 
-          {/* Ícone/Bandeira principal */}
+          {/* Baixar CV */}
+          <Link>
+            <span className="cursor-pointer relative group" onClick={DownloadCV}>BAIXAR CV</span>
+          </Link>
+          
+          {/* Ícone/Bandeira principal
           <img
             src={images.BR}
             alt="Selecionar idioma"
@@ -59,7 +65,7 @@ export function Home() {
           />
 
           {/* Dropdown de idiomas */}
-          <div
+          {/* <div
             className={`dropdown absolute right-0 top-full bg-transparent overflow-hidden transition-all duration-300 ${
               isOpen
                 ? "opacity-100 translate-y-0 visible"
@@ -87,7 +93,7 @@ export function Home() {
               <img src={images.ES} alt="ES" className="w-6 h-6" />
               <span className="text-white">ES</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -108,7 +114,7 @@ export function Home() {
             className="btnHome cursor-pointer h-12 w-38 rounded-md"
             onClick={ContactMeButton}
           >
-            BAIXAR CV
+            CONTATE-ME
           </motion.button>
         </div>
         {/* Setinha */}

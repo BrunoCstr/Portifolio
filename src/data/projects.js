@@ -71,7 +71,7 @@ export const projects = [
   },
   {
     id: "4",
-    homeImage: images.ApresentacaoPessoas3,
+    homeImage: images.ApresentacaoPessoas5,
     homeDescription: `Um sistema completo de processo seletivo, com foco na análise de perfil tipológico e comportamental. O sistema conta com um teste composto por 69 questões cuidadosamente elaboradas para identificar as características e comportamentos dos candidatos à franquia ou colaboradores. Clique no botão para mais detalhes!`,
     appLogo: images.AvantarIndicaLogo,
     appName: "Pessoas Avantar",
