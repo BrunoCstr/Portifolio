@@ -6,7 +6,7 @@ import { ContactMeButton } from "../components/functions/ContactMeButton";
 export function AboutMe() {
   return (
     <>
-      <div className="w-screen h-[900px] bg-blue-custom">
+      <div className="w-full h-auto bg-blue-custom">
         <br />
         {/* Seção de tecnologias  */}
         <div className="w-full overflow-hidden relative mt-3">
@@ -45,14 +45,11 @@ export function AboutMe() {
             )}
           </div>
         </div>
-        <br />
-        <br />
-        <br />
         <div className="flex justify-center items-center flex-row relative">
           {/* Seção sobre mim */}
           <div id="about-me" className="flex grid-cols-2 w-full h-180">
             <motion.div
-              className="flex flex-col justify-center items-center w-[60%]"
+              className="flex flex-col justify-center items-center w-[60%] aboutMe"
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ type: "spring", stiffness: 50, damping: 25 }}
@@ -63,8 +60,8 @@ export function AboutMe() {
               </h1>
               <br />
               <div className="w-[70%]">
-                <p className="text-gray-300 text-[1.2rem] font-normal flex justify-center items-center flex-col">
-                  <div className="flex flex-col justify-center items-center w-[80vw]">
+                <p className="text-gray-300 aboutMe text-[1.2rem] font-normal flex justify-center items-center flex-col">
+                  <div className="flex flex-col justify-center items-center w-[80vw] aboutMeDiv">
                     <div>
                       Olá! Sou{" "}
                       <span className="text-red-custom">Bruno de Castro</span>,
@@ -130,7 +127,7 @@ export function AboutMe() {
           </div>
           {/* Minha foto */}
           <motion.div
-            className="absolute bottom-0 right-0 w-[35%]"
+            className="flex justify-center items-center h-200 absolute bottom-0 right-0 w-[35%] divMyImg"
             initial={{ x: "100vw" }} // Move a imagem completamente para fora da tela à direita
             animate={{ x: 0 }} // Traz a imagem para a posição original
             exit={{ x: "100vw" }} // Move a imagem novamente para fora ao sair
@@ -139,10 +136,12 @@ export function AboutMe() {
           >
             <img
               src={images.BrunoHome}
-              className="h-auto max-h-[76vh] w-full object-contain"
+              className="myImg h-auto max-h-[76vh] w-full object-contain"
             />
           </motion.div>
         </div>
+        <br/>
+        <br/>
       </div>
     </>
   );

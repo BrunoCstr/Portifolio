@@ -17,7 +17,7 @@ import { AvaliationCard } from "./AvaliationCard";
 export function SatisfiedCustomers() {
   return (
     <>
-      <div className="flex justify-center imgBg bg-blue-custom w-screen h-[48.85rem]">
+      <div className="flex justify-center imgBg bg-blue-custom w-full h-[48.85rem]">
         <motion.div
           className="w-[86%] h-[100%] flex justify-center items-center flex-col"
           initial={{ y: 100, opacity: 0 }}

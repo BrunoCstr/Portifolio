@@ -2,7 +2,7 @@ import { AboutMe } from "../components/AboutMe";
 import { Home } from "../components/Home";
 import { Projects } from "../components/Projects";
 import { ContractableServices } from "../components/ContractableServices";
-import { SatisfiedCustomers } from "../components/SatisfiedCustomers";
+// import { SatisfiedCustomers } from "../components/SatisfiedCustomers";
 import { ContactMe } from "../components/ContactMe";
 
 export function Portifolio() {
@@ -12,7 +12,7 @@ export function Portifolio() {
       <AboutMe />
       <Projects/>
       <ContractableServices/>
-      <SatisfiedCustomers/>
+      {/* <SatisfiedCustomers/> */}
       <ContactMe/>
     </div>
   );

@@ -8,17 +8,13 @@ export function Projects() {
   return (
     <div
       id="projects"
-      className="flex justify-center w-full h-360 bg-blue-custom"
+      className="flex justify-center w-full h-auto bg-blue-custom"
     >
-      <div className="w-[86%] h-[100%]">
-        <br />
-        <br />
-        <br />
-        <br />
+      <div className="w-[86%] h-[100%] projects-div">
         <h1 className="text-red-custom font-bold text-[3rem]">Projetos</h1>
         <br />
         <br />
-        <div className="grid grid-cols-3 gap-5 w-full h-[80%]">
+        <div className="grid grid-cols-3 gap-5 w-full h-auto responsiveGrid">
           {projects.map((project, index) => (
             <motion.div
               key={index}

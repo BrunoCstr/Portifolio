@@ -25,12 +25,12 @@ export function Home() {
   return (
     <>
       {/* Nav Header */}
-      <div className="relative flex items-center text-white-custom w-screen h-[10vh] bg-blue-custom">
-        <div className="flex items-center justify-end w-[18%]">
+      <div className="relative flex items-center text-white-custom w-full h-[10vh] bg-blue-custom">
+        <div className="flex items-center justify-end w-[18%] logoBRN">
           <img src={images.logoBRN} className="h-25" />
         </div>
         {/* navContent */}
-        <div className="absolute w-[100%] flex items-center justify-center gap-20">
+        <div className="absolute w-[100%] flex items-center justify-center gap-20 navBar">
           {/* Projetos */}
           <Link to="projects" smooth={true} duration={500}>
             <span className="cursor-pointer relative group">PROJETOS</span>
@@ -100,7 +100,7 @@ export function Home() {
       {/* Home Content */}
 
       {/* Texto */}
-      <div className="containerText flex flex-col justify-center items-center text-6xl h-[90vh] w-screen">
+      <div className="containerText flex flex-col justify-center items-center text-6xl h-[90vh] w-full">
         <div className="flex flex-col items-center gap-3">
           <span>Eleve seu negócio</span>
           <span>digital a outro nível</span>
@@ -118,7 +118,7 @@ export function Home() {
           </motion.button>
         </div>
         {/* Setinha */}
-        <div className="w-screen flex justify-center items-center">
+        <div className="w-full flex justify-center items-center">
           <img ref={arrowRef} src={images.Arrow} className="seta h-15" />
         </div>
       </div>

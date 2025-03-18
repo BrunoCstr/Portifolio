@@ -55,10 +55,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 0; 
+  width: 0;
   height: 100%;
   background: var(--red);
-  border-radius: inherit; 
+  border-radius: inherit;
   z-index: -1;
   transition: width 0.4s ease-in-out;
 }
@@ -162,7 +162,7 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  box-shadow: 0px 4px 10px rgba(0,0,0, 0.10);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
   /* Center slide text vertically */
   display: flex;
@@ -182,7 +182,7 @@ body {
 }
 
 .customerRow {
-  padding-top:10px;
+  padding-top: 10px;
 }
 
 .customersPhoto {
@@ -193,4 +193,342 @@ body {
 
 .developBy {
   padding-top: 10px;
+}
+
+#about-me {
+  margin-top: 5%;
+}
+
+/* Responsividade */
+
+/* Altura */
+
+@media (max-height: 736px) {
+  .seta {
+    height: 45px;
+    margin-top: 17vh;
+  }
+
+  .containerText {
+    font-size: 2.8rem;
+  }
+
+  .group {
+    font-size: 0.8rem;
+  }
+
+  .btnHome {
+    font-size: 0.8rem;
+    height: 45px;
+    width: 130px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .aboutMe {
+    font-size: 1.1rem;
+  }
+
+  .titleProjects,
+  .tittleServices {
+    font-size: 1.4rem;
+  }
+}
+
+/* Largura */
+
+@media (max-width: 1200px) {
+  .logoBRN {
+    justify-content: start;
+    margin-left: 10px;
+  }
+
+  .aboutMe {
+    font-size: 1.1rem;
+    margin-left: 30px;
+  }
+
+  .myImg {
+    max-height: 65vh;
+  }
+
+  .aboutMe {
+    font-size: 0.95rem;
+  }
+
+  .responsiveGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .navBar {
+    gap: 50px;
+    margin-left: 10px;
+  }
+
+  .aboutMe {
+    font-size: 0.95rem;
+  }
+
+  .myImg {
+    max-height: 55vh;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .titleProjects,
+  .tittleServices {
+    font-size: 1.2rem;
+  }
+
+  .size-aboutMe {
+    height: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .myImg {
+    max-height: 45vh;
+  }
+
+  .size-aboutMe {
+    height: 650px;
+  }
+
+  #about-me {
+    margin-top: -3%;
+  }
+
+  .servicesImg {
+    height: 45px;
+  }
+
+  .textServices, .textContactMe, .aboutMe, .textProjects{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .navBar {
+    gap: 30px;
+    margin-left: 20px;
+  }
+
+  .size-aboutMe {
+    height: 550px;
+  }
+
+  #about-me {
+    margin-top: -10%;
+  }
+
+  .group {
+    font-size: 0.7rem;
+  }
+
+  .aboutMe {
+    font-size: 0.7rem;
+  }
+
+  .myImg {
+    max-height: 35vh;
+    margin-top: 10%;
+  }
+
+  .titleProjects,
+  .tittleServices {
+    font-size: 1.0rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .projects-div,
+  .services-div {
+    width: 92%;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .containerText {
+    font-size: 2.8rem;
+  }
+
+  .btnHome {
+    font-size: 0.8rem;
+    height: 45px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 660px) {
+  .logoBRN {    
+    margin-left: -1px;
+  }
+
+  .navBar {
+    gap: 20px;
+    margin-left: 20px;
+  }
+
+  .containerText {
+    font-size: 2rem;
+  }
+
+  .myImg {
+    max-height: 35vh;
+  }
+
+  .textServices, .textContactMe, .aboutMe, .textProjects{
+    font-size: 0.6rem;
+  }
+
+  .btnHome {
+    font-size: 0.8rem;
+    height: 40px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  .divMyImg {
+    display: none;
+  }
+
+  .aboutMe {
+    width: 100%;
+    margin-left: 0px;
+    font-size: 0.75rem;
+  }
+
+  .responsiveGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .textServices, .textContactMe, .textProjects{
+    font-size: 1rem;
+  }
+
+  .titleProjects {
+    font-size: 1.3rem;
+  }
+
+  .projects-div,
+  .services-div {
+    width: 86%;
+  }
+}
+
+@media (max-width: 574px) {
+  .logoBRN {
+    display: none;
+  }
+
+  .aboutMe {
+    font-size: 0.65rem;
+  }
+
+  .navBar {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 497px) {
+  .aboutMe {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .aboutMe {
+    font-size: 0.7rem;
+  }
+
+  .aboutMeDiv {
+    width: 85vw;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+/* Open Project */
+
+@media (max-width: 1400px) {
+  .openProjectBar {
+    width: 65px;
+  }
+
+  .mainContentOpenProject {
+    margin-left: 2.5%;
+  }
+}
+
+@media (max-width: 800px) {
+  .textDescription {
+    font-size: 0.9rem;
+  }
+
+  .mainContentOpenProject {
+    margin-left: 3.5%;
+  }
+}
+
+@media (max-width: 685px) {
+  .textDescription {
+    font-size: 0.7rem;
+  }
+
+  .mainContentOpenProject {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .openProjectBar {
+    width: 45px;
+  }
+
+  .textDescription {
+    font-size: 0.7rem;
+  }
+
+  .mainContentOpenProject {
+    margin-left: 4%;
+  }
+
+  .appLogo {
+    height: 65px;
+  }
+  
+  .projectText {
+    font-size: 1.3rem;
+  }
+
+  .handleBack {
+    height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .openProjectBar {
+    width: 35px;
+  }
+  
+  .projectText {
+    font-size: 1rem;
+  }
+
+  .handleBack {
+    height: 25px;
+  }
+
+  
 }

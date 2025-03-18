@@ -15,9 +15,9 @@ export function ProjectNotFound() {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: "100vw", opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="w-full h-screen"
+      className="w-full h-full"
     >
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         {/* Back Bar */}
         <div className="h-full bg-blue-custom w-[4%] flex flex-col fixed">
           <div className="h-[80%] flex items-center justify-center">

@@ -22,13 +22,13 @@ export function OpenProject() {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: "100vw", opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className="w-full h-screen"
+      className="w-full h-full"
     >
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         {/* Back Bar */}
-        <div className="h-full bg-blue-custom w-[4%] flex flex-col fixed">
+        <div className="h-full bg-blue-custom w-[4%] flex flex-col fixed openProjectBar">
           <div className="h-[80%] flex items-center justify-center">
-            <span className="text-red-custom text-2xl font-bold rotate-270">
+            <span className="text-red-custom text-2xl font-bold rotate-270 projectText">
               Projetos
             </span>
           </div>
@@ -40,23 +40,25 @@ export function OpenProject() {
               <img
                 src={images.iconBack}
                 onClick={handleBackToProjects}
-                className="cursor-pointer h-9"
+                className="cursor-pointer h-9 handleBack"
               />
             </motion.button>
           </div>
         </div>
+        <br/>
         {/* Main Content */}
-        <div className="w-full h-full flex items-center flex-col">
+        <div className="w-full h-full flex items-center flex-col mainContentOpenProject">
           {/* Header Content */}
           <div className="h-[22%] w-[85%] flex flex-row items-center gap-5">
-            <img src={project.appLogo} className="h-23 rounded-2xl" />
+            <img src={project.appLogo} className="h-23 rounded-2xl appLogo" />
             <h1 className="text-blue-custom text-6xl font-bold">
               {project.appName}
             </h1>
           </div>
+          <br/>
           {/* Description and Images */}
           <div className="h-[30%] w-[85%] flex flex-col gap-3">
-            <span className="text-blue-custom font-bold text-[1.1rem]">
+            <span className="text-blue-custom font-bold text-[1.1rem] textDescription">
               {project.description}
             </span>
             <span className="cursor-pointer text-blue-700" onClick={(e) => window.open(project.url, '_blank')}>{project.url}</span>

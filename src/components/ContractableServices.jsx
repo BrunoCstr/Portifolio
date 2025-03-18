@@ -9,9 +9,11 @@ export function ContractableServices() {
       {/* Seção dos Serviçõs Contratáveis */}
       <div
         id="services"
-        className="flex justify-center w-full h-220 bg-blue-custom"
+        className="flex justify-center w-full h-auto bg-blue-custom"
       >
-        <div className="w-[86%] h-[100%]">
+        <div className="w-[86%] h-[100%] services-div">
+        <br/>
+        <br/>
           <div className="flex justify-center items-center flex-col">
             <h1 className="text-red-custom font-bold text-[3rem]">
               Serviços contratáveis
@@ -26,7 +28,7 @@ export function ContractableServices() {
           <br />
           <br />
           <br />
-          <div className="grid grid-cols-3 gap-10 w-full h-[40%]">
+          <div className="grid grid-cols-3 gap-10 w-full h-[40%] responsiveGrid">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -48,6 +50,9 @@ export function ContractableServices() {
               </motion.div>
             ))}
           </div>
+          <br/>
+          <br/>
+          <br/>
         </div>
       </div>
     </>
