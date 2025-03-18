@@ -18,7 +18,7 @@ import MySql from "../assets/images/mysql.png";
 import Next from "../assets/images/next.png";
 import Node from "../assets/images/nodejs.png";
 import Php from "../assets/images/php.png";
-import PowerBI from "../assets/images/PowerBI.png";
+import PowerBI from "../assets/images/powerbi.png";
 import Python from "../assets/images/python.png";
 import React from "../assets/images/React.png";
 import Sass from "../assets/images/sass.png";
