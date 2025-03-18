@@ -41,7 +41,7 @@ import iconBack from "../assets/images/iconBack.png";
 import AvantarIndicaLogo from "../assets/images/avantar_indica_logo.png";
 import firebaseOriginal from "../assets/images/FirebaseOriginal.png";
 import flutterOriginal from "../assets/images/FlutterOriginal.png";
-import dartOriginal from "../assets/images/dartOriginal.png";
+import dartOriginal from "../assets/images/DartOriginal.png";
 import pbiOriginal from "../assets/images/PowerBIOriginal.png";
 import jsOriginal from "../assets/images/JavaScriptOriginal.png";
 import pyOriginal from "../assets/images/PythonOriginal.webp";
@@ -53,7 +53,7 @@ import cssOriginal from "../assets/images/cssOriginal.png";
 import reactOriginal from "../assets/images/ReactOriginal.webp";
 import tsOriginal from "../assets/images/tsOriginal.png";
 import tailwindOriginal from "../assets/images/tailwindOriginal.svg";
-import logoRSup from "../assets/images/painelredersuplogo.png";
+import logoRSup from "../assets/images/PainelRedeRSupLogo.png";
 import AvantarIndicaCapa from "../assets/images/CapaAvantarIndica.png";
 import AvantarIndicaApresentacao1 from "../assets/images/Apresentacao_AvantarIndica1.png";
 import DashboardApresentacao1 from "../assets/images/ApresentacaoDashboard1.png";
@@ -91,7 +91,7 @@ import customerBruno from "../assets/images/customerBruno.jpeg";
 import whatsapp from "../assets/images/whatsapp.png"
 import email from "../assets/images/email.png"
 import instagramWhite from "../assets/images/instagram_white.png"
-import githubWhite from "../assets/images/github_white.png"
+import githubWhite from "../assets/images/github_White.png"
 import linkedinWhite from "../assets/images/linkedin_white.png"
 
 export default {
