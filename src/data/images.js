@@ -20,7 +20,7 @@ import Node from "../assets/images/nodejs.png";
 import Php from "../assets/images/php.png";
 import PowerBI from "../assets/images/powerbi.png";
 import Python from "../assets/images/python.png";
-import React from "../assets/images/React.png";
+import React from "../assets/images/react.png";
 import Sass from "../assets/images/sass.png";
 import TS from "../assets/images/ts.png";
 import Tailwind from "../assets/images/tailwind.png";
